@@ -1,0 +1,17 @@
+{
+  "identifier": "saltcrate-oracle",
+  "name": "SaltCrate Oracle",
+  "version": "1.0.0",
+  "description": "Pay-per-call web intelligence MCP server: fetch live pages, check links, detect content changes, and verify claims. $0.50/call via Stripe MPP card — no API key or subscription.",
+  "author": "SaltCrate",
+  "homepage": "https://saltcrate.com",
+  "cloudEndpoint": "https://saltcrate-oracle.fly.dev/mcp",
+  "category": "developer",
+  "tags": ["web-scraping", "search", "link-checker", "fact-checking", "paid"],
+  "tools": [
+    { "name": "fetch", "description": "Fetch and parse a live web page" },
+    { "name": "check_link", "description": "Verify a URL is live and report status" },
+    { "name": "check_change", "description": "Detect changes in a page's content" },
+    { "name": "verify", "description": "Fact-check a claim against live web sources" }
+  ]
+}
