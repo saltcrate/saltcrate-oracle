@@ -29,7 +29,8 @@ the free tier — or want `extract` — either settle per call (USDC/card, see b
 
 **Try a single tool in the browser:** <https://oracle.saltcrate.com/demo?tool=fetch> ·
 [`check_link`](https://oracle.saltcrate.com/demo?tool=check_link) ·
-[`search`](https://oracle.saltcrate.com/demo?tool=search&q=silver+spot+price)
+[`search`](https://oracle.saltcrate.com/demo?tool=search&q=silver+spot+price) ·
+[`extract`](https://oracle.saltcrate.com/demo?tool=extract) (page → JSON)
 
 ## Prepaid access pass (60 seconds, card, no wallet)
 
