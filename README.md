@@ -1,50 +1,70 @@
 # Oracle by SaltCrate
 
-**Live web intelligence for AI agents — pay per call, no subscription.** Seven MCP tools:
-live search, schema-driven structured extraction, clean page fetch, link checking, change
+**Live web intelligence for AI agents — free to start, no key, no signup, no wallet.** Seven MCP
+tools: live search, schema-driven structured extraction, clean page fetch, link checking, change
 detection, recurring monitoring, and claim verification.
 
 - **Endpoint (Streamable HTTP):** `https://oracle.saltcrate.com/mcp`
-- **Pricing:** $0.01/call in USDC (Tempo) on every tool · $0.50/call by card on `extract` + `monitor`
+- **Free tier:** **200 calls/hour per IP, no `Authorization` header at all** — on `fetch`, `search`,
+  `check_link`, `check_change`, `verify` and `monitor`. Point your agent at the endpoint and go.
+- **Beyond the free tier:** $0.01/call in USDC (Tempo) on every tool · $0.50/call by card on
+  `extract` + `monitor` (the LLM-backed tools)
 - **No wallet?** **Prepaid access pass: $5 for 1,000 calls** → <https://oracle.saltcrate.com/buy>
 
-**Try it before you pay:** <https://oracle.saltcrate.com/demo?tool=fetch> runs a real tool call on the live
-server — free, no key, no signup (also [`check_link`](https://oracle.saltcrate.com/demo?tool=check_link) and [`search`](https://oracle.saltcrate.com/demo?tool=search&q=silver+spot+price)).
+## Quickstart (zero config)
 
-## Quickstart (60 seconds, card, no wallet)
-
-1. Buy a pass: <https://oracle.saltcrate.com/buy> ($5 → 1,000 calls, valid 12 months)
-2. Copy the `orc_…` key it gives you.
-3. Call any tool with the key as a bearer token:
+No key, no account, no payment. Any MCP client:
 
 ```bash
 curl -s https://oracle.saltcrate.com/mcp \
-  -H "Authorization: Bearer orc_your_key_here" \
   -H "Content-Type: application/json" \
   -H "Accept: application/json, text/event-stream" \
   -d '{"jsonrpc":"2.0","id":1,"method":"tools/call",
        "params":{"name":"search","arguments":{"query":"silver spot price"}}}'
 ```
 
+That returns real results. The same endpoint answers `fetch`, `check_link`, `check_change`,
+`verify` and `monitor` the same way, free, up to 200 calls/hour from your IP. When you outgrow
+the free tier — or want `extract` — either settle per call (USDC/card, see below) or buy a pass.
+
+**Try a single tool in the browser:** <https://oracle.saltcrate.com/demo?tool=fetch> ·
+[`check_link`](https://oracle.saltcrate.com/demo?tool=check_link) ·
+[`search`](https://oracle.saltcrate.com/demo?tool=search&q=silver+spot+price)
+
+## Prepaid access pass (60 seconds, card, no wallet)
+
+1. Buy a pass: <https://oracle.saltcrate.com/buy> ($5 → 1,000 calls, valid 12 months)
+2. Copy the `orc_…` key it gives you.
+3. Send it as a bearer token on any call:
+
+```bash
+curl -s https://oracle.saltcrate.com/mcp \
+  -H "Authorization: Bearer orc_…" \
+  -H "Content-Type: application/json" \
+  -H "Accept: application/json, text/event-stream" \
+  -d '{"jsonrpc":"2.0","id":1,"method":"tools/call",
+       "params":{"name":"extract","arguments":{"url":"https://example.com","schema":"{}"}}}'
+```
+
 Check remaining calls: `GET https://oracle.saltcrate.com/usage?key=orc_…`
 
 ## Pay-per-call (no account)
 
-An unpaid call returns a `-32042` "Payment Required" challenge carrying both rails — USDC
-via Tempo and, on `extract`/`monitor`, a Stripe card charge. The agent pays, retries, and
-gets the result plus a receipt. Nothing is stored: one charge, one call.
+A call past the free allowance — or any `extract` call with no key — returns a `-32042`
+"Payment Required" challenge carrying both rails: USDC via Tempo and, on `extract`/`monitor`,
+a Stripe card charge. The agent pays, retries, and gets the result plus a receipt.
 
 ## Tools
 
-| Tool | What it does | USDC | Card |
-|---|---|---|---|
-| `fetch` | Clean extraction — boilerplate, nav, ads stripped | $0.01 | — |
-| `search` | Live web search — title, URL, snippet (DuckDuckGo / Brave / Serper) | $0.01 | — |
-| `extract` | Schema-driven structured extraction into typed JSON (DeepSeek) | $0.01 | $0.50 |
-| `check_link` | URL liveness — status, redirect chain, final URL, latency | $0.01 | — |
-| `check_change` | Hash-based page-change detection | $0.01 | — |
-| `monitor` | Recurring URL watch — sticky change tracking with timestamps | $0.01 | $0.50 |
-| `verify` | Heuristic claim-vs-source check — confidence + supporting excerpt | $0.01 | — |
+| Tool | What it does | Free tier | USDC | Card |
+|---|---|---|---|---|
+| `fetch` | Clean extraction — boilerplate, nav, ads stripped | ✅ | $0.01 | — |
+| `search` | Live web search — title, URL, snippet (DuckDuckGo / Brave / Serper) | ✅ | $0.01 | — |
+| `extract` | Schema-driven structured extraction into typed JSON (DeepSeek) | — | $0.01 | $0.50 |
+| `check_link` | URL liveness — status, redirect chain, final URL, latency | ✅ | $0.01 | — |
+| `check_change` | Hash-based page-change detection | ✅ | $0.01 | — |
+| `monitor` | Recurring URL watch — sticky change tracking with timestamps | ✅ | $0.01 | $0.50 |
+| `verify` | Heuristic claim-vs-source check — confidence + supporting excerpt | ✅ | $0.01 | — |
 
 Discovery files: [`/llms.txt`](https://oracle.saltcrate.com/llms.txt) ·
 [`/openapi.json`](https://oracle.saltcrate.com/openapi.json) ·
