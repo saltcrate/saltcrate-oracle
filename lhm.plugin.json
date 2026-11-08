@@ -1,8 +1,8 @@
 {
   "identifier": "saltcrate-oracle",
   "name": "Oracle by SaltCrate",
-  "version": "1.1.0",
-  "description": "Fiat-settled pay-per-call web intelligence for AI agents — live search, schema-driven structured extraction, clean page fetch, link checking, and recurring change monitoring. Pay $1.00/call by card (Stripe) or $0.05/call in USDC (Tempo). No API key, no subscription, no crypto wallet required.",
+  "version": "1.1.1",
+  "description": "Live web intelligence for AI agents from $0.01 per call (USDC), pay-per-call, no subscription. Live search, schema-driven structured extraction, clean page fetch, link checking, and recurring change monitoring. Card accepted ($0.50) on extract + monitor. No API key, no crypto wallet required.",
   "author": "SaltCrate",
   "homepage": "https://saltcrate.com",
   "cloudEndpoint": "https://oracle.saltcrate.com/mcp",

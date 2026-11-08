@@ -1,10 +1,10 @@
 # Oracle by SaltCrate
 
-**Fiat-settled pay-per-call web intelligence** for AI agents — live search, schema-driven structured extraction, clean page fetch, link checking, and recurring change monitoring. No API key, no subscription, no crypto wallet required.
+**Live web intelligence for AI agents from $0.01 per call (USDC)** — pay-per-call, no subscription. Live search, schema-driven structured extraction, clean page fetch, link checking, and recurring change monitoring. No API key, no crypto wallet required.
 
 - **Endpoint (Streamable HTTP):** `https://oracle.saltcrate.com/mcp`
-- **Pricing:** $1.00/tool call via Stripe MPP card, or $0.05/call in USDC (Tempo) for high-volume search/extract.
-- **Payments:** Stripe Machine Payments (card/SPT) + Tempo USDC — an unpaid call returns a `-32042` "Payment Required" challenge; the agent pays, retries, and gets the result + receipt.
+- **Pricing:** $0.01/call in USDC (Tempo) on every tool. Card accepted ($0.50) on `extract` + `monitor`.
+- **Payments:** Tempo USDC + Stripe Machine Payments (card/SPT) — an unpaid call returns a `-32042` "Payment Required" challenge; the agent pays, retries, and gets the result + receipt.
 
 ## Tools
 
