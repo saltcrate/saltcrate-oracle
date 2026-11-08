@@ -8,6 +8,9 @@ detection, recurring monitoring, and claim verification.
 - **Pricing:** $0.01/call in USDC (Tempo) on every tool · $0.50/call by card on `extract` + `monitor`
 - **No wallet?** **Prepaid access pass: $5 for 1,000 calls** → <https://oracle.saltcrate.com/buy>
 
+**Try it before you pay:** <https://oracle.saltcrate.com/demo?tool=fetch> runs a real tool call on the live
+server — free, no key, no signup (also [`check_link`](https://oracle.saltcrate.com/demo?tool=check_link) and [`search`](https://oracle.saltcrate.com/demo?tool=search&q=silver+spot+price)).
+
 ## Quickstart (60 seconds, card, no wallet)
 
 1. Buy a pass: <https://oracle.saltcrate.com/buy> ($5 → 1,000 calls, valid 12 months)
