@@ -11,6 +11,8 @@ detection, recurring monitoring, and claim verification.
   `extract` + `monitor` (the LLM-backed tools)
 - **No wallet?** **Prepaid access pass: $5 for 1,000 calls** → <https://oracle.saltcrate.com/buy>
 
+**Agent install:** [`llms-install.md`](llms-install.md) has copy-paste configs for Cursor, Cline, VS Code, Claude Code and Windsurf.
+
 ## Quickstart (zero config)
 
 No key, no account, no payment. Any MCP client:
