@@ -76,6 +76,19 @@ a Stripe card charge. The agent pays, retries, and gets the result plus a receip
 | `monitor` | Recurring URL watch — sticky change tracking with timestamps | ✅ | $0.01 | $0.50 |
 | `verify` | Heuristic claim-vs-source check — confidence + supporting excerpt | ✅ | $0.01 | — |
 
+## Use it from CI — no code required
+
+[`page-change-monitor`](https://github.com/saltcrate/page-change-monitor) is a GitHub Action
+wrapping `check_change`: watch any URL in CI, get a job-summary table plus an optional issue
+listing what changed. Free tier, no API key, no state committed to your repo.
+
+```yaml
+- uses: saltcrate/page-change-monitor@v1
+  with:
+    urls: https://example.com/pricing
+    create-issue: "true"
+```
+
 Discovery files: [`/llms.txt`](https://oracle.saltcrate.com/llms.txt) ·
 [`/openapi.json`](https://oracle.saltcrate.com/openapi.json) ·
 [`/pricing.md`](https://oracle.saltcrate.com/pricing.md)
