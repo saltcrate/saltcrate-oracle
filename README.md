@@ -1,8 +1,10 @@
 # Oracle by SaltCrate
 
-**Live web intelligence for AI agents — free to start, no key, no signup, no wallet.** Seven MCP
-tools: live search, schema-driven structured extraction, clean page fetch, link checking, change
-detection, recurring monitoring, and claim verification.
+**Verification and freshness for AI agents — free to start, no key, no signup, no wallet.**
+Search is the most commoditised slot in the MCP registry (11.5% of 40,100 servers give it away
+free); monitoring, change-detection and verification are 1.4–4.1%. Seven MCP tools: claim
+verification, recurring monitoring, hash-based change detection, schema-driven structured
+extraction, clean page fetch, link checking, and live search.
 
 > **The market, measured:** we pulled all 40,100 listings in the official MCP registry — 67% are
 > hosted remotely and only **5.8% publish any pricing at all**. Dataset and method:
