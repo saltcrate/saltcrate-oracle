@@ -15,6 +15,7 @@ extraction, clean page fetch, link checking, and live search.
   `check_link`, `check_change`, `verify` and `monitor`. Point your agent at the endpoint and go.
 - **Beyond the free tier:** $0.01/call in USDC (Tempo) on every tool · $0.50/call by card on
   `extract` + `monitor` (the LLM-backed tools)
+- **Starter pass (plain card, no wallet/MPP client):** **$1 for 100 calls** — <https://oracle.saltcrate.com/buy?plan=starter>.
 - **No wallet?** **Prepaid access pass: $5 for 1,000 calls** → <https://oracle.saltcrate.com/buy>
 
 **Agent install:** [`llms-install.md`](llms-install.md) has copy-paste configs for Cursor, Cline, VS Code, Claude Code and Windsurf.
