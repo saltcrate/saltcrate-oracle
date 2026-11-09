@@ -4,6 +4,10 @@
 tools: live search, schema-driven structured extraction, clean page fetch, link checking, change
 detection, recurring monitoring, and claim verification.
 
+> **The market, measured:** we pulled all 40,100 listings in the official MCP registry — 67% are
+> hosted remotely and only **5.8% publish any pricing at all**. Dataset and method:
+> [The State of MCP](https://oracle.saltcrate.com/state-of-mcp).
+
 - **Endpoint (Streamable HTTP):** `https://oracle.saltcrate.com/mcp`
 - **Free tier:** **200 calls/hour per IP, no `Authorization` header at all** — on `fetch`, `search`,
   `check_link`, `check_change`, `verify` and `monitor`. Point your agent at the endpoint and go.
