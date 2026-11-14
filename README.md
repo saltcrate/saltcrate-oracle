@@ -2,9 +2,9 @@
 
 **Verification and freshness for AI agents — free to start, no key, no signup, no wallet.**
 Search is the most commoditised slot in the MCP registry (11.5% of 40,100 servers give it away
-free); monitoring, change-detection and verification are 1.4–4.1%. Seven MCP tools: claim
-verification, recurring monitoring, hash-based change detection, schema-driven structured
-extraction, clean page fetch, link checking, and live search.
+free); monitoring, change-detection and verification are 1.4–4.1%. Eight MCP tools: claim
+verification, recurring monitoring, hash-based change detection, dependency CVE scanning,
+schema-driven structured extraction, clean page fetch, link checking, and live search.
 
 > **The market, measured:** we pulled all 40,100 listings in the official MCP registry — 67% are
 > hosted remotely and only **5.8% publish any pricing at all**. Dataset and method:
@@ -12,7 +12,7 @@ extraction, clean page fetch, link checking, and live search.
 
 - **Endpoint (Streamable HTTP):** `https://oracle.saltcrate.com/mcp`
 - **Free tier:** **200 calls/hour per IP, no `Authorization` header at all** — on `fetch`, `search`,
-  `check_link`, `check_change`, `verify` and `monitor`. Point your agent at the endpoint and go.
+  `check_link`, `check_change`, `verify`, `monitor` and `check_deps`. Point your agent at the endpoint and go.
 - **Beyond the free tier:** $0.01/call in USDC (Tempo) on every tool · $0.50/call by card on
   `extract` + `monitor` (the LLM-backed tools)
 - **Starter pass (plain card, no wallet/MPP client):** **$1 for 100 calls** — <https://oracle.saltcrate.com/buy?plan=starter>.
@@ -33,8 +33,9 @@ curl -s https://oracle.saltcrate.com/mcp \
 ```
 
 That returns real results. The same endpoint answers `fetch`, `check_link`, `check_change`,
-`verify` and `monitor` the same way, free, up to 200 calls/hour from your IP. When you outgrow
-the free tier — or want `extract` — either settle per call (USDC/card, see below) or buy a pass.
+`verify`, `monitor` and `check_deps` the same way, free, up to 200 calls/hour from your IP.
+When you outgrow the free tier — or want `extract` — either settle per call (USDC/card, see below)
+or buy a pass.
 
 **Try a single tool in the browser:** <https://oracle.saltcrate.com/demo?tool=fetch> ·
 [`check_link`](https://oracle.saltcrate.com/demo?tool=check_link) ·
@@ -49,7 +50,7 @@ the free tier — or want `extract` — either settle per call (USDC/card, see b
 
 ```bash
 curl -s https://oracle.saltcrate.com/mcp \
-  -H "Authorization: Bearer orc_…" \
+  -H "Authorization: Bearer ***" \
   -H "Content-Type: application/json" \
   -H "Accept: application/json, text/event-stream" \
   -d '{"jsonrpc":"2.0","id":1,"method":"tools/call",
@@ -75,6 +76,7 @@ a Stripe card charge. The agent pays, retries, and gets the result plus a receip
 | `check_change` | Hash-based page-change detection | ✅ | $0.01 | — |
 | `monitor` | Recurring URL watch — sticky change tracking with timestamps | ✅ | $0.01 | $0.50 |
 | `verify` | Heuristic claim-vs-source check — confidence + supporting excerpt | ✅ | $0.01 | — |
+| `check_deps` | Dependency CVE scan — latest version + OSV.dev advisories with fixing versions | ✅ | $0.01 | — |
 
 ## Use it from CI — no code required
 

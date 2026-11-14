@@ -1,7 +1,7 @@
 {
   "identifier": "saltcrate-oracle",
   "name": "Oracle by SaltCrate",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Live web intelligence for AI agents from $0.01 per call (USDC), pay-per-call, no subscription. Live search, schema-driven structured extraction, clean page fetch, link checking, and recurring change monitoring. Card accepted ($0.50) on extract + monitor. No API key, no crypto wallet required.",
   "author": "SaltCrate",
   "homepage": "https://saltcrate.com",
@@ -15,6 +15,7 @@
     { "name": "check_link", "description": "URL liveness — HTTP status, redirect chain, final URL, latency" },
     { "name": "check_change", "description": "Hash-based page-change detection" },
     { "name": "monitor", "description": "Recurring URL watch — sticky change tracking with timestamps" },
-    { "name": "verify", "description": "Heuristic claim-vs-source check — confidence score + excerpt" }
+    { "name": "verify", "description": "Heuristic claim-vs-source check — confidence score + excerpt" },
+    { "name": "check_deps", "description": "Dependency CVE scan — latest version + OSV.dev advisories with fixing versions" }
   ]
 }
