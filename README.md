@@ -1,17 +1,18 @@
 # Oracle by SaltCrate
 
 **Verification and freshness for AI agents — free to start, no key, no signup, no wallet.**
-Search is the most commoditised slot in the MCP registry (11.5% of 40,100 servers give it away
-free); monitoring, change-detection and verification are 1.4–4.1%. Eight MCP tools: claim
+Search is the most commoditised slot in the MCP registry (10.9% of 63,678 servers give it away
+free); monitoring and change-detection are 1.3% and verification 3.7%. Eight MCP tools: claim
 verification, recurring monitoring, hash-based change detection, dependency CVE scanning,
 schema-driven structured extraction, clean page fetch, link checking, and live search.
 
-> **The market, measured:** we pulled all 40,100 listings in the official MCP registry — 67% are
-> hosted remotely and only **5.8% publish any pricing at all**. Dataset and method:
-> [The State of MCP](https://oracle.saltcrate.com/state-of-mcp).
+> **The market, measured:** we pulled all 63,678 listings in the official MCP registry — 67.5% are
+> hosted remotely and only **0.93% state a price** (4.9% mention money at all). Dataset and method:
+> [The State of MCP](https://oracle.saltcrate.com/state-of-mcp) ·
+> [the 595 priced servers](https://oracle.saltcrate.com/mcp-pricing).
 
 - **Endpoint (Streamable HTTP):** `https://oracle.saltcrate.com/mcp`
-- **Free tier:** **200 calls/hour per IP, no `Authorization` header at all** — on `fetch`, `search`,
+- **Free tier:** **100 calls per IP, no `Authorization` header at all** — on `fetch`, `search`,
   `check_link`, `check_change`, `verify`, `monitor` and `check_deps`. Point your agent at the endpoint and go.
 - **Beyond the free tier:** $0.01/call in USDC (Tempo) on every tool · $0.50/call by card on
   `extract` + `monitor` (the LLM-backed tools)
@@ -33,7 +34,7 @@ curl -s https://oracle.saltcrate.com/mcp \
 ```
 
 That returns real results. The same endpoint answers `fetch`, `check_link`, `check_change`,
-`verify`, `monitor` and `check_deps` the same way, free, up to 200 calls/hour from your IP.
+`verify`, `monitor` and `check_deps` the same way, free, up to 100 calls from your IP.
 When you outgrow the free tier — or want `extract` — either settle per call (USDC/card, see below)
 or buy a pass.
 

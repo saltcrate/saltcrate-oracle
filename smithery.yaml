@@ -3,8 +3,8 @@
 #
 # This MCP is a remote server hosted at https://oracle.saltcrate.com/mcp.
 # Smithery users connect directly to the remote endpoint - no local install.
-# Free tier: 200 calls/hour per IP, no API key. Paid: $0.01/call USDC
-# (Tempo, all 7 tools) or $5 for 1,000 calls by card (prepaid key).
+# Free tier: 100 calls per IP, no API key. Paid: $0.01/call USDC
+# (Tempo, all 8 tools) or $5 for 1,000 calls by card (prepaid key).
 
 startCommand:
   type: http
@@ -14,7 +14,7 @@ startCommand:
     fetch (clean page text), extract (schema-driven JSON extraction), verify
     (claim-vs-source check), check_link (URL liveness + redirects),
     check_change (page-change detection), monitor (recurring URL watch).
-    Free 200 calls/hour per IP with no key, then pay-per-call.
+    Free 100 calls per IP with no key, then pay-per-call.
 
 metadata:
   homepage: https://oracle.saltcrate.com

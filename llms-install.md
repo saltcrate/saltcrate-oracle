@@ -4,11 +4,11 @@ SaltCrate Oracle is a **remote MCP server** (Streamable HTTP). There is nothing 
 build, or host. It needs no API key, no account, and no wallet:
 
 - **Endpoint:** `https://oracle.saltcrate.com/mcp`
-- **Free tier:** 200 calls/hour per IP on `fetch`, `search`, `check_link`, `check_change`,
+- **Free tier:** 100 calls per IP on `fetch`, `search`, `check_link`, `check_change`,
   `verify`, `monitor` — no `Authorization` header at all.
-- **Paid:** $0.01/call in USDC (Tempo) on all 7 tools; $0.50/call by card on `extract` +
+- **Paid:** $0.01/call in USDC (Tempo) on all 8 tools; $0.50/call by card on `extract` +
   `monitor`; or a prepaid pass — **$5 for 1,000 calls** at https://oracle.saltcrate.com/buy
-- **Tools:** `search`, `fetch`, `extract`, `check_link`, `check_change`, `verify`, `monitor`
+- **Tools:** `search`, `fetch`, `extract`, `check_link`, `check_change`, `verify`, `monitor`, `check_deps`
 - **Docs:** https://oracle.saltcrate.com/llms.txt · OpenAPI: https://oracle.saltcrate.com/openapi.json
 
 ## Claude Code
