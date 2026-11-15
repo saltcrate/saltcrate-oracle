@@ -14,10 +14,13 @@ schema-driven structured extraction, clean page fetch, link checking, and live s
 - **Endpoint (Streamable HTTP):** `https://oracle.saltcrate.com/mcp`
 - **Free tier:** **100 calls per IP, no `Authorization` header at all** — on `fetch`, `search`,
   `check_link`, `check_change`, `verify`, `monitor` and `check_deps`. Point your agent at the endpoint and go.
-- **Beyond the free tier:** $0.01/call in USDC (Tempo) on every tool · $0.50/call by card on
+- **Beyond the free tier:** $0.05/call in USDC (Tempo) on every tool · $1.00/call by card on
   `extract` + `monitor` (the LLM-backed tools)
 - **Starter pass (plain card, no wallet/MPP client):** **$1 for 100 calls** — <https://oracle.saltcrate.com/buy?plan=starter>.
 - **No wallet?** **Prepaid access pass: $5 for 1,000 calls** → <https://oracle.saltcrate.com/buy>
+- **Want a page watched without running an agent?** **SaltCrate Watch — $9 / 30 days:** 25 URLs
+  checked hourly on our servers, JSON webhook on change, private dashboard, no auto-renew →
+  <https://oracle.saltcrate.com/watch>
 
 **Agent install:** [`llms-install.md`](llms-install.md) has copy-paste configs for Cursor, Cline, VS Code, Claude Code and Windsurf.
 
@@ -70,14 +73,21 @@ a Stripe card charge. The agent pays, retries, and gets the result plus a receip
 
 | Tool | What it does | Free tier | USDC | Card |
 |---|---|---|---|---|
-| `fetch` | Clean extraction — boilerplate, nav, ads stripped | ✅ | $0.01 | — |
-| `search` | Live web search — title, URL, snippet (DuckDuckGo / Brave / Serper) | ✅ | $0.01 | — |
-| `extract` | Schema-driven structured extraction into typed JSON (DeepSeek) | — | $0.01 | $0.50 |
-| `check_link` | URL liveness — status, redirect chain, final URL, latency | ✅ | $0.01 | — |
-| `check_change` | Hash-based page-change detection | ✅ | $0.01 | — |
-| `monitor` | Recurring URL watch — sticky change tracking with timestamps | ✅ | $0.01 | $0.50 |
-| `verify` | Heuristic claim-vs-source check — confidence + supporting excerpt | ✅ | $0.01 | — |
-| `check_deps` | Dependency CVE scan — latest version + OSV.dev advisories with fixing versions | ✅ | $0.01 | — |
+| `fetch` | Clean extraction — boilerplate, nav, ads stripped | ✅ | $0.05 | — |
+| `search` | Live web search — title, URL, snippet (DuckDuckGo / Brave / Serper) | ✅ | $0.05 | — |
+| `extract` | Schema-driven structured extraction into typed JSON (DeepSeek) | — | $0.05 | $1.00 |
+| `check_link` | URL liveness — status, redirect chain, final URL, latency | ✅ | $0.05 | — |
+| `check_change` | Hash-based page-change detection | ✅ | $0.05 | — |
+| `monitor` | Recurring URL watch — sticky change tracking with timestamps | ✅ | $0.05 | $1.00 |
+| `verify` | Heuristic claim-vs-source check — confidence + supporting excerpt | ✅ | $0.05 | — |
+| `check_deps` | Dependency CVE scan — latest version + OSV.dev advisories with fixing versions | ✅ | $0.05 | — |
+
+## Watch a page on a schedule (no agent required)
+
+Per-call monitoring is the wrong shape for a human who just wants to be told when a page moves:
+50 URLs checked hourly would be ~$1,800/month at $0.05/call. So it is sold as a schedule instead —
+**$9 for 30 days, 25 URLs, hourly checks, webhook alerts, private dashboard, no auto-renew:**
+<https://oracle.saltcrate.com/watch>
 
 ## Use it from CI — no code required
 
