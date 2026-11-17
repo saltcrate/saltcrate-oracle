@@ -10,10 +10,11 @@ startCommand:
   type: http
   url: https://oracle.saltcrate.com/mcp
   description: >-
-    Web intelligence for AI agents. Seven tools: search (live web search),
+    Web intelligence for AI agents. Eight tools: search (live web search),
     fetch (clean page text), extract (schema-driven JSON extraction), verify
     (claim-vs-source check), check_link (URL liveness + redirects),
-    check_change (page-change detection), monitor (recurring URL watch).
+    check_change (page-change detection), check_deps (dependency freshness /
+    vulnerability lookup), monitor (recurring URL watch).
     Free 100 calls per IP with no key, then pay-per-call.
 
 metadata:
