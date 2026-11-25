@@ -5,9 +5,9 @@ build, or host. It needs no API key, no account, and no wallet:
 
 - **Endpoint:** `https://oracle.saltcrate.com/mcp`
 - **Free tier:** 100 calls per IP on `fetch`, `search`, `check_link`, `check_change`,
-  `verify`, `monitor` — no `Authorization` header at all.
-- **Paid:** $0.01/call in USDC (Tempo) on all 8 tools; $0.50/call by card on `extract` +
-  `monitor`; or a prepaid pass — **$5 for 1,000 calls** at https://oracle.saltcrate.com/buy
+  `verify`, `monitor`, `check_deps` — no `Authorization` header at all.
+- **Paid:** $0.05/call in USDC (Tempo or x402 on Base) on all 8 tools; $1.00/call by card on `extract` +
+  `monitor`; or a prepaid pass — **$1 for 100 / $5 for 1,000 calls** at https://oracle.saltcrate.com/buy
 - **Tools:** `search`, `fetch`, `extract`, `check_link`, `check_change`, `verify`, `monitor`, `check_deps`
 - **Docs:** https://oracle.saltcrate.com/llms.txt · OpenAPI: https://oracle.saltcrate.com/openapi.json
 

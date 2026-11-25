@@ -1,21 +1,56 @@
 {
   "identifier": "saltcrate-oracle",
   "name": "Oracle by SaltCrate",
-  "version": "1.1.2",
-  "description": "Live web intelligence for AI agents from $0.01 per call (USDC), pay-per-call, no subscription. Live search, schema-driven structured extraction, clean page fetch, link checking, and recurring change monitoring. Card accepted ($0.50) on extract + monitor. No API key, no crypto wallet required.",
+  "version": "1.2.0",
+  "description": "Web tools for AI agents over MCP: search, extract, verify claims, monitor pages, check links, scan npm/PyPI/crates deps for CVEs. 100 free calls with no key; then $0.05/call in USDC (Tempo or x402), $1.00/call by card on extract + monitor, or a $1 card pass for 100 calls.",
   "author": "SaltCrate",
   "homepage": "https://saltcrate.com",
   "cloudEndpoint": "https://oracle.saltcrate.com/mcp",
   "category": "developer",
-  "tags": ["web-search", "web-scraping", "data-extraction", "link-checker", "monitoring", "fact-checking", "paid", "mcp"],
+  "tags": [
+    "web-search",
+    "web-scraping",
+    "data-extraction",
+    "link-checker",
+    "monitoring",
+    "fact-checking",
+    "dependency-check",
+    "vulnerability-scanning",
+    "paid",
+    "mcp"
+  ],
   "tools": [
-    { "name": "fetch", "description": "Clean web extraction — boilerplate, navigation, and ads stripped" },
-    { "name": "extract", "description": "Schema-driven structured extraction into typed JSON (DeepSeek)" },
-    { "name": "search", "description": "Live web search — title, URL, snippet (DuckDuckGo / Brave / Serper)" },
-    { "name": "check_link", "description": "URL liveness — HTTP status, redirect chain, final URL, latency" },
-    { "name": "check_change", "description": "Hash-based page-change detection" },
-    { "name": "monitor", "description": "Recurring URL watch — sticky change tracking with timestamps" },
-    { "name": "verify", "description": "Heuristic claim-vs-source check — confidence score + excerpt" },
-    { "name": "check_deps", "description": "Dependency CVE scan — latest version + OSV.dev advisories with fixing versions" }
+    {
+      "name": "fetch",
+      "description": "Clean web extraction — boilerplate, navigation, and ads stripped"
+    },
+    {
+      "name": "extract",
+      "description": "Schema-driven structured extraction into typed JSON (DeepSeek)"
+    },
+    {
+      "name": "search",
+      "description": "Live web search — title, URL, snippet (DuckDuckGo / Brave / Serper)"
+    },
+    {
+      "name": "check_link",
+      "description": "URL liveness — HTTP status, redirect chain, final URL, latency"
+    },
+    {
+      "name": "check_change",
+      "description": "Hash-based page-change detection"
+    },
+    {
+      "name": "monitor",
+      "description": "Recurring URL watch — sticky change tracking with timestamps"
+    },
+    {
+      "name": "verify",
+      "description": "Heuristic claim-vs-source check — confidence score + excerpt"
+    },
+    {
+      "name": "check_deps",
+      "description": "Dependency CVE scan — latest version + OSV.dev advisories with fixing versions"
+    }
   ]
 }
