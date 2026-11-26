@@ -1,6 +1,6 @@
 # Oracle by SaltCrate
 
-[![saltcrate/saltcrate-oracle MCP server](https://glama.ai/mcp/servers/saltcrate/saltcrate-oracle/badges/score.svg)](https://glama.ai/mcp/servers/saltcrate/saltcrate-oracle)
+[![saltcrate/saltcrate-oracle MCP server](https://glama.ai/mcp/servers/saltcrate/saltcrate-oracle/badges/score.svg)](https://glama.ai/mcp/servers/saltcrate/saltcrate-oracle) [![SaltCrate Oracle MCP connector](https://glama.ai/mcp/connectors/com.saltcrate/oracle/badges/score.svg)](https://glama.ai/mcp/connectors/com.saltcrate/oracle)
 
 **Verification and freshness for AI agents — free to start, no key, no signup, no wallet.**
 Search is the most commoditised slot in the MCP registry (10.9% of 63,678 servers give it away
