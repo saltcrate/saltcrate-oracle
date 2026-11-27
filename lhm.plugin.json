@@ -1,7 +1,7 @@
 {
   "identifier": "saltcrate-oracle",
   "name": "Oracle by SaltCrate",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Web tools for AI agents over MCP: search, extract, verify claims, monitor pages, check links, scan npm/PyPI/crates deps for CVEs. 100 free calls with no key; then $0.05/call in USDC (Tempo or x402), $1.00/call by card on extract + monitor, or a $1 card pass for 100 calls.",
   "author": "SaltCrate",
   "homepage": "https://saltcrate.com",
